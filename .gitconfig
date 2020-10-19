@@ -1,0 +1,33 @@
+# Add this to you gitconfig
+# Comment: Start of "Extra Block"
+# Comment: This is to unlock VSCode as your git diff and git merge tool
+[alias]
+  ci = commit
+  st = status
+  br = branch
+  co = checkout
+  cp = cherry-pick
+  df = diff
+  lg = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset' --date=relative
+  cl = log --graph --pretty=format:'%h%d %s (%an)'
+  lo = log --oneline
+  authors = log --pretty=format:'%an <%ae>'
+  dif = diff
+  di = diff
+  dff = diff
+  dt = difftool
+[core]
+	editor = code --wait
+[merge]
+    tool = vscode
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
+[diff]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+# VSCode Difftool
+## End of extra block
+[user]
+	name = Frank Dye
+	email = frankhdye@gmail.com
